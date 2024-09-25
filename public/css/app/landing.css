@@ -1,0 +1,13 @@
+.containerLeftCollapseButtonUser {
+    height: 9%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 93.5%;
+    left: 0;
+    border: solid 0;
+    background-color:#ad1a2e;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}

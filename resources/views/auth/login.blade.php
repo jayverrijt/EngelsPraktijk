@@ -7,41 +7,53 @@
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-text-input placeholder="Email addres" class="inputEmail" id="email" type="email" name="email" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+        <br><br><br>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="inputPasswd"
                             type="password"
                             name="password"
+                            placeholder="Wachtwoord"
                             required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-
+        <br><br><br>
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <input id="remember_me" type="checkbox" class="" name="remember">
+                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400" style="color: #bd0926">{{ __('Blijf Ingelogd') }}</span>
             </label>
         </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
+        <div class="loginBottom">
+            <x-primary-button class="button-pill">
+                {{ __('Inloggen') }}
             </x-primary-button>
+            <br><br><br>
         </div>
+        <div style="position:absolute; bottom: 50%; left: 10%">
+            @if (Route::has('password.request'))
+                <button class="button-pill-auth-ctrl">
+                <a class="" href="{{ route('password.request') }}">
+                    {{ __('Wachtwoord vergeten?') }}
+                </a>
+                </button>
+            @endif
+        </div>
+
+        </div>
+
     </form>
+    <div style="position:absolute; bottom: 28%; left: 10%">
+    <button class="button-pill-auth-ctrl">
+        <a class="" href="{{ route('register') }}" style="font-weight: bold">
+            {{ __('Nog geen account?') }}
+        </a>
+    </button>
+    </div>
 </x-guest-layout>

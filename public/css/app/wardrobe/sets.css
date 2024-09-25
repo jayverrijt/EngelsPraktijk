@@ -1,0 +1,72 @@
+.containerSets {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: solid 0;
+    background-color: transparent;
+}
+.setContainer {
+    height: 10%;
+    width: 60%;
+    position: relative;
+    margin-top: 1%;
+    left: 20%;
+    right: 20%;
+    margin-bottom: 1%;
+    padding: 0;
+    border: solid 2px #bd0926;
+}
+.setNameHolder {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    border: solid 0;
+}
+#setText {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    margin-left: 1%;
+    padding: 0;
+}
+.picHolderSet {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    border: solid 0;
+}
+.phsHead {
+    height: 100%;
+    width: 20%;
+    border: solid 0;
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+}
+.phsTop {
+    height: 100%;
+    width: 20%;
+    border: solid 0;
+    background-color: transparent;
+    left: 25%;
+    position: absolute;
+}
+.phsPant {
+    height: 100%;
+    width: 20%;
+    border: solid 0;
+    background-color: transparent;
+    left: 50%;
+    position: absolute;
+}
+.phsShoe {
+    height: 100%;
+    width: 20%;
+    border: solid 0;
+    background-color: transparent;
+    left: 75%;
+    position: absolute;
+}

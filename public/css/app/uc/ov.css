@@ -1,0 +1,95 @@
+.ovcontainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: solid 0;
+}
+.infoContainer {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    border: solid 0;
+}
+.infoContainer h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #bd0926;
+    margin-left: 2%;
+    position: absolute;
+}
+.urInfo {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+}
+.urInfo p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #bd0926;
+    margin-left: 2%;
+    position: absolute;
+}
+.psInfo {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+}
+.psInfo p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #bd0926;
+    margin-left: 2%;
+    position: absolute
+}
+.ctrlButtns {
+    height: 10%;
+    width: 100%;
+    border: solid 0;
+    position: absolute;
+    bottom: 0;
+}
+.ovBtn {
+    height: 90%;
+    width: 45%;
+    position: absolute;
+    bottom: 5%;
+    background-color: #ececf6;
+    border-radius: 20%;
+    cursor: pointer;
+    border: solid 0;
+    color: #bd0926;
+    font-size: 1.5rem;
+}
+.informationArtical {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    border: solid 0;
+}
+.imageholder {
+    height: 50%;
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    top: 0;
+    border: solid 0;
+}
+.nameholder {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 55%
+}
+.nameholder h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #bd0926;
+    text-align: center;
+    position: relative;
+}

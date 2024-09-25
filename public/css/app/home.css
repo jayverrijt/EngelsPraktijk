@@ -1,0 +1,14 @@
+.homePage {
+    height: 100%;
+    width: 65%;
+    display: block;
+    border: solid 0;
+    background-color: #ffffff;
+}
+.welcome {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2e3440;
+    margin-top: 10%;
+    margin-left: 10%;
+}

@@ -1,0 +1,24 @@
+
+version: '3.5'
+networks:
+  dockernet:
+    external:
+      name: dockernet
+services:
+  goodlookz:
+    container_name: goodlookz 
+    image: bitnami/laravel
+    networks:
+      - dockernet
+    environment:
+      - DB_HOST=mysql
+      - LARAVEL_PORT_NUMBER=9001
+      - LARAVEL_DATABASE_TYPE=mysql
+      - LARAVEL_DATABASE_NAME=goodlookz
+      - DB_PORT=3306
+      - DB_USERNAME=jayv
+      - DB_PASSWORD=Woezel-2005!
+    ports:
+      - "9001:9001"
+    volumes:
+      - "./goodlookz:/app"

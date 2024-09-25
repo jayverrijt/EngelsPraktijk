@@ -1,0 +1,50 @@
+.inputEmail {
+    height: 40px;
+    border-radius: 12px;
+    width: 300px;
+    position: absolute;
+    background-color:#bd0926 ;
+    border: solid 0;
+    color: #ffffff;
+    text-align: center;
+}
+.inputEmail::placeholder {
+    color: #ffffff;
+}
+
+
+.inputPasswd {
+    height: 40px;
+    border-radius: 12px;
+    width: 300px;
+    position: absolute;
+    background-color:#bd0926 ;
+    text-align: center;
+    border: solid 0;
+    color: #ffffff;
+}
+.inputPasswd::placeholder {
+    color: #ffffff;
+}
+.loginBottom {
+    position: absolute;
+    border: solid 0;
+    bottom: 50%;
+}
+
+.button-pill-auth-ctrl {
+    height: 20px;
+    position: absolute;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
+    color: #bd0926;
+    text-align: center;
+    border: 0 solid;
+    box-shadow: none;
+}
+.button-pill-auth-ctrl a {
+    color: #bd0926;
+    font-size: 0.9rem;
+    text-decoration: none;
+}

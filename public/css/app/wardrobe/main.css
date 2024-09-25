@@ -1,0 +1,148 @@
+.wardCenterHolder {
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: solid 0;
+    position: absolute;
+    background-color: transparent;
+}
+.topbar {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.bottombar {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+}
+.bottombar_top {
+    height: 50%;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.bottombar_bottom {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+}
+.addbtnholder {
+    height: 100%;
+    width: 33.33333333333333%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+.savebtnholder {
+    height: 100%;
+    width: 33.33333333333333%;
+    position: absolute;
+    top: 0;
+    left: 33.33333333333333%;
+    background: transparent;
+}
+.setbtnholder {
+    height: 100%;
+    width: 33.33333333333333%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+}
+.wardbtnstyle {
+    height: 95%;
+    width: 95%;
+    top: 1%;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: solid 2px #bd0926;
+    color: #bd0926;
+}
+
+.contWardBody {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    bottom: 20%;
+    background-color: transparent;
+}
+.contWardBodySections {
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+}
+.contWardBodySectionsCtrls {
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+}
+.wardbtnstylechev {
+    height: 100%;
+    width: 100%;
+    border: solid 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #bd0926;
+}
+.popup {
+    height: 30%;
+    width: 50%;
+    position: relative;
+    transform: translate(50%);
+    top: 25%;
+    border: solid 2px #bd0926;
+    background: #fcfcfc;
+    border-radius: 15px;
+}
+.blur {
+    filter: blur(5px);
+}
+.popupcontentbody {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: transparent;
+}
+.popupcontentfooter {
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    border: solid 0;
+    background-color: transparent;
+    position: absolute;
+}
+.contWardBodySectionItem {
+    height: 100%;
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+}

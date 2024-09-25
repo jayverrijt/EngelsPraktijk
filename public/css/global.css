@@ -1,0 +1,117 @@
+html {
+    background-color: #ffffff;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Roboto', monospace;
+}
+
+.zoneleft {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: solid 0;
+}
+.zoneright {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    border: solid 0;
+
+}
+.containerScope {
+    height: 95%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+.zoneTop {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border: solid 0;
+}
+.zoneBottom {
+    height: 68%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: solid 0;
+}
+
+.HeaderLookz {
+    position: relative;
+    font-size: 64px;
+    top: 30%;
+    color: #bd0926;
+}
+
+.button-pill {
+    height: 40px;
+    position: absolute;
+    width: 300px;
+    border-radius: 15px;
+    background-color:#bd0926 ;
+    color: #d8dee9;
+    text-align: center;
+    border: 0 solid #bd0926;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.button-pill::placeholder {
+    color: #ffffff;
+}
+.registerContainer {
+    position: absolute;
+    height: 40%;
+    width: 40%;
+    left: 0;
+    border: solid 0;
+}
+
+.button-pill a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.loginContainer {
+    position: absolute;
+    height: 50%;
+    width: 40%;
+    left: 0;
+    bottom: 0;
+    border: solid 0;
+}
+.logoLookzLanding {
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 10.5%;
+}
+.logoLookzAuth {
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+.popup {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 25%;
+    background-color: #ffffff;
+    color: #bd0926;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: solid 0;
+}
+

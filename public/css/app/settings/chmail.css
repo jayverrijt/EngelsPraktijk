@@ -1,0 +1,65 @@
+.coHeader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    left: 5%;
+    color: #333;
+}
+
+.inputStyle {
+    width: 500px;
+    border: 0px;
+    border-bottom: 1px solid #333;
+    background-color: #ffffff;
+    height: 30px;
+}
+.labelStyle {
+    position: absolute;
+    font-weight: 400;
+    left: 20%;
+}
+.buttonStyle {
+    width: 500px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #bd0926;
+    font-size: 1rem;
+    color: #bd0926;
+    font-weight: 500;
+}
+.inputStyle2 {
+    width: 500px;
+    border: 0px;
+    border-bottom: 1px solid #333;
+    left: 5%;
+    position: relative;
+    background-color: #ffffff;
+    height: 30px;
+}
+.labelStyle2 {
+    position: absolute;
+    font-weight: 400;
+    left: 5%;
+}
+.selectionStyle {
+    width: 500px;
+    border: 0px;
+    border-bottom: 1px solid #333;
+    background-color: #ffffff;
+    height: 30px;
+    left: 5%;
+    position: relative;
+}
+
+.setupInput {
+    border: solid 1px;
+    border-radius: 5px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    width: 500px;
+    left: 5%;
+    position: absolute;
+}
