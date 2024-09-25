@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>HealthyWaveZ</title>
+        <title>EngelsPraktijk</title>
 
         <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
         <link rel="favorite icon" href="{{ asset('favicon.png') }}">
@@ -21,7 +21,9 @@
     <body>
     <div class="containerScope">
         <div class="container zoneleft">
+        <!--
             <img src="" alt="Logo Placeholder" class="logoLookzAuth">
+        -->
         </div>
         <div class="container zoneright">
             <div class="container zoneTop"></div>
