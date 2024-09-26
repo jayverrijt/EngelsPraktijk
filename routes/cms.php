@@ -11,47 +11,7 @@
 
     Route::middleware('auth')->group(function () {
         Route::get('/admin/dashboard', function () {
-            $male = 0;
-            $female = 0;
-            $other = 0;
-            $genders = \DB::table('system')->select('gender')->get();
-            foreach ($genders as $gender) {
-                if ($gender->gender == "M") {
-                    $male++;
-                }
-                if($gender->gender == "F") {
-                    $female++;
-                }
-                if ($gender->gender == "O") {
-                    $other++;
-                }
-            }
-            $af = 0;
-            $an = 0;
-            $as = 0;
-            $eu = 0;
-            $na = 0;
-            $oc = 0;
-            $sa = 0;
-            $continents = \DB::table('system')->select('continent')->get();
-            foreach($continents as $cont) {
-                if ($cont->continent == 1) {
-                    $af++;
-                } else if ($cont->continent == 2) {
-                    $an++;
-                } else if ($cont->continent == 3) {
-                    $as++;
-                } else if ($cont->continent == 4) {
-                    $eu++;
-                } else if ($cont->continent == 5) {
-                    $na++;
-                } else if ($cont->continent == 6) {
-                    $oc++;
-                } else if ($cont->continent == 7) {
-                    $sa++;
-                }
-            }
-            return view('admin.layouts.launch', compact('male', 'female', 'other', 'af', 'an', 'as', 'eu', 'na', 'oc', 'sa'));
+            return view('admin.layouts.launch');
         })->middleware(['auth', 'verified'])->name('admin.dashboard');
         Route::get('/admin/dashboard/db', function () {
             return view('admin.layouts.db');

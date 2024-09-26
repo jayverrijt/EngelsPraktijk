@@ -1,17 +1,20 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\GoogleAuthController;
-use App\Http\Controllers\UpdatePasswdController;
-use App\Http\Controllers\UnSocialController;
-use App\Http\Controllers\UpdateUserDetails;
-use App\Http\Controllers\addUserController;
-use App\Http\Controllers\editUserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
+
+Route::get('/logoff', function () {
+    session()->forget('head');
+    session()->forget('top');
+    session()->forget('pants');
+    session()->forget('shoes');
+    Auth::logout();
+    return redirect('/');
+})->name('logoff');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -19,12 +22,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Google
-// Logoff Fix
-Route::get('/logoff', function () {
-    Auth::logout();
-    return redirect('/');
-})->name('logoff');
 require __DIR__.'/auth.php';
 require __DIR__.'/cms.php';
-require __DIR__.'/app.php';
