@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('google_id')->nullable();
             $table->integer('type')->default(2);
-            $table->integer('acctype')->default(0);
-            $table->integer('setup')->default(1);
-            $table->integer('ucsetup')->default(1)->nullable();
+            $table->string('class')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -42,13 +40,11 @@ return new class extends Migration
         });
 
         DB::table('users') -> insert([
-            'name' => 'System Administrator',
-            'email' => 'info@good-lookz.com',
-            'password' => '$2a$12$B9uhPLU84qct70MzxohjY.xjISjie34.MT3213MUawfR27qtSnxcK',
+            'name' => 'Demo User',
+            'email' => 'demo@engelspraktijk.local',
+            'password' => '$2y$12$PgHzDEL3x5YiJOWs/eraluaq8rW4XX4jlAcZiY761PbIqZbiqOrym',
             'type' => '2',
-            'acctype' => '0',
-            'ucsetup' => '3',
-            'setup' => '2',
+            'class' => 'Demo1b',
         ]);
 
     }

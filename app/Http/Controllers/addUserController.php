@@ -11,15 +11,14 @@ class addUserController extends Controller
         $email = null;
         $password = null;
         $type = null;
-        $acctype = null;
-
+        $class = null;
         if (request('adminUsername') != null) {
             $name = request('adminUsername');
             $email = request('adminEmail');
             $password = request('adminPassword');
             $type = 2;
-            $acctype = 0;
-            $this->add($name, $email, $password, $type, $acctype);
+            $class = 'example';
+            $this->add($name, $email, $password, $type, $class);
         } else {
             $name = request('shopUsername');
             $email = request('shopEmail');

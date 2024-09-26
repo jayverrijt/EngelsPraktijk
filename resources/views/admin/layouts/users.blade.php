@@ -14,7 +14,7 @@
                     <th>ID</th>
                     <th>Naam</th>
                     <th>Email</th>
-                    <th>Role</th>
+                    <th>Klas</th>
                     <th>Actions</th>
                 </tr>
                 @foreach($users as $user)
@@ -23,7 +23,7 @@
                             <td>{{$user->id}}</td>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
-                            <td>{{$user->type}}</td>
+                            <td>{{$user->class}}</td>
                             <td style="display: inline-flex; width: 100%">
                                 <form method="get" action="{{route('admin.dashboard-users-edit', ['id' => $user->id])}}" style="margin-left: 2%">
                                     <button  type="submit" value="{{$user->id}}" class="buttonStyle"><i class="fas fa-pencil-alt"></i></button>

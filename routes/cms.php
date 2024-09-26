@@ -17,7 +17,7 @@
             return view('admin.layouts.db');
         })->middleware(['auth', 'verified'])->name('admin.dashboard-db');
         Route::get('/admin/dashboard/users', function () {
-            $users = DB::table('users')->select('id','name', 'email', 'google_id', 'acctype', 'type')->get();
+            $users = DB::table('users')->select('id','name', 'email', 'class', 'type')->get();
             return view('admin.layouts.users', compact('users'));
         })->middleware(['auth', 'verified'])->name('admin.dashboard-users');
         Route::get('/admin/dashboard/inyourecolour', function () {
@@ -35,7 +35,7 @@
         })->name('admin.dashboard-inyourecolour-delete');
 
         Route::get('/admin/dashboard/admins', function () {
-            $users = DB::table('users')->select('id','name', 'email', 'google_id', 'acctype', 'type')->get();
+            $users = DB::table('users')->select('id','name', 'email', 'type')->get();
             return view('admin.layouts.admins', compact('users'));
         })->middleware(['auth', 'verified'])->name('admin.dashboard-admins');
         Route::get('/admin/dashboard/admins/delete/{id}', function ($id) {

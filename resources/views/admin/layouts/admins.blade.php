@@ -9,8 +9,6 @@
         <div class="locationBar">
             <p style="margin-left: 1%"><a href="{{route('admin.dashboard')}}">Home</a> / Administrators</p>
             <div class="addAdminBtn"><a style="top: 20%; position:absolute;" href="{{route('admin.dashboard-admins-add')}}"><i class="fa fa-regular fa-user-plus"></i> Add Administrator</a></div>
-            <div class="elevateAdminBtn" onclick="toggleDropdown()"><a style="top: 20%; cursor: pointer;"><i class="fa fa-solid fa-arrow-up"></i> Elevate User</a></div>
-            <div class="unElevateAdminBtn" onclick="toggleUnDropdown()"><a style="top: 20%; cursor: pointer;"><i class="fa fa-solid fa-arrow-down"></i> Undo-Elevation User</a></div>
         </div>
         <div id="dropdown" class="dropmenu away">
             @foreach($users as $user)
@@ -39,7 +37,6 @@
             <div class="adminContainerNormal">
                 @foreach($users as $user)
                     @if($user->type == 2)
-                    @if($user->acctype == 0)
                         <div class="adminCard">
                             <div class="cardHeader">
                                 <p style="left: 2%; position:absolute;">Account details</p>
@@ -77,47 +74,7 @@
                             </div>
                         </div>
                     @endif
-                    @endif
                 @endforeach
-            </div>
-            <div class="adminContainerSocial">
-                @foreach($users as $user)
-                    @if($user->type == 2)
-                    @if($user->acctype == 1)
-                        <div class="adminCard">
-                            <div class="cardHeader">
-                                <p style="left: 2%; position:absolute;">Account details</p>
-                            </div>
-                            <div class="cardBody">
-                                <div class="cardIcon" style="text-align: center; font-size:3em;">
-                                    <i class="fas fa-user-shield"></i>
-                                </div>
-                                <div class="cardContext">
-                                    <div class="cardContextName">
-                                        <p style="margin: 0; top: 20%; font-size: 1.0rem; font-weight: 600; left: 2%; position:absolute;">{{$user->name}}</p>
-                                    </div>
-                                    <div class="cardContextMail">
-                                        <p style="font-size: 1rem; font-weight: 400; left: 2%; position:absolute;">{{$user->email}}</p>
-                                    </div>
-                                    <div class="cardContextChange">
-                                    </div>
-                                    <div class="cardContextChangePass">
-                                        <form method="GET" action="{{route('admin.dashboard-admins-change-unsocial', ['id' => $user->id])}}">
-                                            <button class="buttonStyle" name="{{$user->id}}" type="submit" style="font-size: 1rem; font-weight: 400; left: 2%; position:absolute; color: #007bff">Unlink Social Media</button>
-                                        </form>
-                                    </div>
-                                    <div class="cardContextDelete">
-                                        <form method="post" action="{{route('admin.dashboard-admins-delete', ['id' => $user->id])}}">
-                                            <button class="buttonStyle" name="{{$user->id}}" type="submit" style="font-size: 1rem; font-weight: 400; left: 2%; bottom: 0%; position:absolute; color: darkred"><p>Delete account</p></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                    @endif
-                @endforeach
-
             </div>
         </div>
     </div>
