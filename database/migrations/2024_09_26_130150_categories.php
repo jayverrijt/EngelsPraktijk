@@ -32,5 +32,7 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('catlist');
+        Schema::dropIfExists('categories');
     }
 };
