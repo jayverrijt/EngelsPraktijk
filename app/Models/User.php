@@ -16,10 +16,16 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+     //TODO GoogleId?
     protected $fillable = [
         'name',
         'email',
+        'email_verified_at',
         'password',
+        'google_id',
+        'type',
+        'class',
     ];
 
     /**
@@ -43,5 +49,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function classes() {
+        return $this->hasOne(Cls::class, 'class_id');
     }
 }
