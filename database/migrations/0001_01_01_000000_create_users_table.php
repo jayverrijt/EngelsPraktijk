@@ -46,7 +46,7 @@ return new class extends Migration
             'email' => 'demo@engelspraktijk.local',
             'password' => '$2y$12$PgHzDEL3x5YiJOWs/eraluaq8rW4XX4jlAcZiY761PbIqZbiqOrym',
             'type' => '2',
-            'class' => 'Demo1b',
+            'class_id' => '1',
         ]);
 
     }

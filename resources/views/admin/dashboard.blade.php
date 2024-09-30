@@ -26,7 +26,7 @@
         <ul class="containerLeftUl" id="containerLeftUl">
             <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-fw fa-home"></i></a></li>
             <li><a href="{{route('admin.dashboard-db')}}"><i class="fa fa-fw fa-database"></i></a></li>
-            <li><a href=""><i class="fa fa-fw fa-sd-card"></i></a></li>
+            <li><a href="{{route('admin.cards')}}"><i class="fa fa-fw fa-sd-card"></i></a></li>
             <li><a href="{{route('admin.dashboard-users')}}"><i class="fa fa-fw fa-users"></i></a></li>
             <li><a href="{{route('admin.dashboard-admins')}}"><i class="fa fa-fw fa-shield-alt"></i></a></li>
         </ul>

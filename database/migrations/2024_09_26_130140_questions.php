@@ -19,6 +19,14 @@ return new class extends Migration
             $table->integer('level_id');
             $table->timestamps();
         });
+        Schema::create('questionsyn', function (Blueprint $table) {
+            $table->id();
+            $table->string('question');
+            $table->string('answer'); // Can only be Y or N
+            $table->integer('category_id');
+            $table->integer('level_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -28,5 +36,6 @@ return new class extends Migration
     {
         //
         Schema::dropIfExists('questions');
+        Schema::dropIfExists('questionsyn');
     }
 };

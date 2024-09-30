@@ -13,6 +13,11 @@
         Route::get('/admin/dashboard', function () {
             return view('admin.layouts.launch');
         })->middleware(['auth', 'verified'])->name('admin.dashboard');
+        Route::get('/admin/cards', function () {
+            $qs = \DB::table('questions')->select()->get();
+            $qsyn = \DB::table('questionsyn')->select()->get();
+            return view('admin.layouts.cards', compact('qs', 'qsyn'));
+        })->middleware(['auth', 'verified'])->name('admin.cards');
         Route::get('/admin/dashboard/db', function () {
             return view('admin.layouts.db');
         })->middleware(['auth', 'verified'])->name('admin.dashboard-db');
