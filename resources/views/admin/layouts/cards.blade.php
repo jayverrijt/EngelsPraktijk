@@ -35,8 +35,8 @@
             <!--- Card Left Top - Donut Chart GoogleChartAPI --->
             <div class="bodyControl" style="left: 0; top: 0">
                 <div class="canvaGenderHead">
-                    <i id="labelGen" class="fas fa-chart-pie" style="left: 45%; position:absolute; top: 1%; color: #2e3440"></i>
-                    <label id="labelGenLabel" for="labelGen" style="left: 50%; position:absolute; padding: 0; margin: 0; color: #2e3440">Soorten vragen</label>
+                    <i id="labelGen" class="fas fa-chart-pie" style="left: 2%; position:absolute; top: 1%; color: #2e3440; font-size: 2rem"></i>
+                    <label id="labelGenLabel" for="labelGen" style="left: 8%; position:absolute; padding: 0; margin: 0; color: #2e3440; font-size: 1.8rem">Soorten vragen</label>
                 </div>
                 <div class="canvaGenderBody">
                     <div id="piechart" style="min-height: 100%; min-width: 100% "></div>
