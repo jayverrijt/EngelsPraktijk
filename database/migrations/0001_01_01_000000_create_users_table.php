@@ -44,7 +44,7 @@ return new class extends Migration
         DB::table('users') -> insert([
             'name' => 'Demo User',
             'email' => 'demo@engelspraktijk.local',
-            'password' => '$2y$12$PgHzDEL3x5YiJOWs/eraluaq8rW4XX4jlAcZiY761PbIqZbiqOrym',
+            'password' => bcrypt(env('APP_MASTER_PASSWORD')),
             'type' => '2',
             'class_id' => '1',
         ]);
