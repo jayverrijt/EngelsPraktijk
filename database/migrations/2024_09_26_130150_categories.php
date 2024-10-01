@@ -14,7 +14,7 @@ return new class extends Migration
         //
         Schema::create('catlist', function (Blueprint $table) {
             $table->id();
-            $table->string('categoryname');
+            $table->string('category_name');
             $table->timestamps();
         });
 

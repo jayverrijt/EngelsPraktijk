@@ -10,10 +10,14 @@ class Level extends Model
     use HasFactory;
 
     protected $fillable = [
-        'levelName',
+        'level_name',
     ];
 
     public function classes() {
         return $this->hasMany(Cls::class);
+    }
+
+    public function questions() {
+        return $this->hasMany(Question::class);
     }
 }

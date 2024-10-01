@@ -9,7 +9,18 @@ class Question extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'question',
+        'answer',
+        'category_id',
+        'level_id',
+    ];
+
     public function categories() {
-        return $this->hasOne(Category::class, 'category_id');
+        return $this->hasOne(Catlist::class, 'category_id');
+    }
+
+    public function levels() {
+        return $this->hasOne(Level::class, 'level_id');
     }
 }

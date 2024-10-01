@@ -10,9 +10,11 @@ class Cls extends Model
     //Class is sadly reserved by PHP
     use HasFactory;
 
+    protected $table = 'classes';
+
     protected $fillable = [
-        'className',
-        'level',
+        'class_name',
+        'level_id',
     ];
 
     public function users() {

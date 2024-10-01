@@ -12,7 +12,7 @@ class Catlist extends Model
     protected $table = 'catlist';
 
     protected $fillable = [
-        'categoryName',
+        'category_name',
     ];
 
     public function questions() {

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Combined;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryCreationRequest extends FormRequest
+class ClassModificationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,16 +22,21 @@ class CategoryCreationRequest extends FormRequest
      */
     public function rules(): array
     {
+        $questionId = $this->route('class');
+
         return [
-            'categoryName' => ['required', 'unique:catlist'],
+            'class_name' => ['required', Rule::unique('classes')->ignore($questionId)],
+            'level_id' => ['required', 'exists:levels,id'],
         ];
     }
 
     public function messages()
     {
         return [
-            'categoryName.required' => 'The categoryName field is not present.',
-            'categoryName.unique' => 'Category is already registered.',
+            'class_name.required' => 'The class_name field is not present.',
+            'class_name.unique' => 'Class already exists.',
+            'level_id.required' => 'Level not specified.',
+            'level_id.exists' => 'Level could not be found.',
         ];
     }
 

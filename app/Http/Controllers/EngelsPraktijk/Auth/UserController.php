@@ -3,11 +3,8 @@
 namespace App\Http\Controllers\EngelsPraktijk\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UserCreationRequest;
+use App\Http\Requests\Creation\UserCreationRequest;
 use App\Models\User;
-use Dotenv\Exception\ValidationException;
-use Exception;
-use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
