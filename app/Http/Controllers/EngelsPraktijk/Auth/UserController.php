@@ -18,8 +18,8 @@ class UserController extends Controller
     }
 
     public function store(UserCreationRequest $request) {
-        $validatedData = $request->validated();
-        $user = User::create($validatedData);
+        $validatedRequest = $request->validated();
+        $user = User::create($validatedRequest);
 
         return $user;
     }
@@ -51,6 +51,6 @@ class UserController extends Controller
         }     
         
         $user->delete();
-        return response()->json(['message' => 'User Deleted'], 200);
+        return response()->json(['message' => 'User Deleted'], 204);
     }
 }

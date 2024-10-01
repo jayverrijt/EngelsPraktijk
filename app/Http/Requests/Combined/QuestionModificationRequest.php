@@ -25,7 +25,11 @@ class QuestionModificationRequest extends FormRequest
         $questionId = $this->route('question');
     
         return [
-            'question' => ['required', Rule::unique('questions')->ignore($questionId)],
+            'question' => [
+                'required', 
+                Rule::unique('questions')->ignore($questionId), 
+                Rule::unique('questionsyn')->ignore($questionId),
+            ],            
             'answer' => [],
             'category_id' => ['required', 'exists:catlist,id'],
             'level_id' => ['required', 'exists:levels,id'],

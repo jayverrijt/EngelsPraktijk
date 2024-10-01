@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -24,6 +25,13 @@ return new class extends Migration
             $table->integer('level_id');
             $table->timestamps();
         });
+
+        DB::table('catlist') -> insert([
+            'category_name' => 'Open',
+        ]);
+        DB::table('catlist') -> insert([
+            'category_name' => 'Closed',
+        ]);
     }
 
     /**

@@ -51,8 +51,11 @@ class CategoryController extends Controller
         if ($category == null) {
             return response()->json(['message' => 'Category not found.'], 404);
         }
+        else if ($category->id == 1 || $category-> id == 2) {
+            return response()->json(['message', 'This category cannot be deleted.'], 400);
+        }
 
         $category->delete();
-        return response()->json(['message' => 'Category deleted.'], 200);
+        return response()->json(['message' => 'Category deleted.'], 204);
     }
 }

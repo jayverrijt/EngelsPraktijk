@@ -15,7 +15,7 @@ Route::get('/user', function (Request $request) {
 // Create, Edit are pages reserved for front-end display (i.e. the page a user sees the edit form). These are useless in an API.
 
 //User
-Route::resource('user', UserController::class, [
+Route::resource('users', UserController::class, [
     'except' => ['create', 'edit']
 ]);
 

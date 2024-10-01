@@ -54,6 +54,6 @@ class ClassController extends Controller
         }
 
         $class->delete();
-        return response()->json(['message' => 'Class deleted.'], 200);
+        return response()->json(['message' => 'Class deleted.'], 204);
     }
 }

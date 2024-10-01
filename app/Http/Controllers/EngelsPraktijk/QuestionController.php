@@ -5,11 +5,24 @@ namespace App\Http\Controllers\EngelsPraktijk;
 use App\Models\Question;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Combined\QuestionModificationRequest;
+use Illuminate\Http\Request;
+
+use function PHPUnit\Framework\isEmpty;
 
 class QuestionController extends Controller
 {
-    public function index() {
-        $questions = Question::all();
+    // Cat 2 = Yes/No
+    // Cat 1 = Open
+    public function index(Request $request) {
+        $categoryId = $request->query('category');
+        $questions = new Question();
+
+        if ($categoryId == null) {
+            $questions = $questions->findAll();
+        }
+        else {
+            $questions = $questions->findQuestions($categoryId);
+        }
 
         return $questions;
     }
@@ -17,12 +30,21 @@ class QuestionController extends Controller
     public function store(QuestionModificationRequest $request) {
         $validatedRequest = $request->validated();
 
-        $question = Question::create($validatedRequest);
+        $question = new Question();
+        $question = $question->addQuestion($validatedRequest);
+        
         return $question;
     }
 
-    public function show($questionId) {
-        $question = Question::find($questionId);
+    public function show(Request $request, $questionId) {
+        $categoryId = $request->query('category');
+
+        if ($categoryId == null) {
+            return response()->json(['message' => 'Category not specified.'], 422);
+        }
+
+        $question = new Question();
+        $question = $question->findQuestion($questionId, $categoryId);
 
         if ($question == null) {
             return response()->json(['message' => 'Question not found.'], 404);
@@ -32,32 +54,40 @@ class QuestionController extends Controller
     }
 
     public function update(QuestionModificationRequest $request, $questionId) {
-        $validatedRequest = $request->validated();
-        $question = Question::find($questionId);
+        // $validatedRequest = $request->validated();
+        // $question = Question::find($questionId);
 
-        if ($question == null) {
-            return response()->json(['message' => 'Question not found.'], 404);
-        }
+        // if ($question == null) {
+        //     return response()->json(['message' => 'Question not found.'], 404);
+        // }
 
-        $question->question = $validatedRequest['question'];
-        $question->answer = $validatedRequest['answer'];
-        $question->category_id = $validatedRequest['category_id'];;
-        $question->level_id = $validatedRequest['level_id'];
+        // $question->question = $validatedRequest['question'];
+        // $question->answer = $validatedRequest['answer'];
+        // $question->category_id = $validatedRequest['category_id'];;
+        // $question->level_id = $validatedRequest['level_id'];
 
-        $question->save();
+        // $question->save();
 
-        return $question;
+        // return $question;
+        return response()->json(['message' => 'Not yet implemented!'], 501);
     }
 
-    public function destroy($questionId) {
-        $question = Question::find($questionId);
+    public function destroy(Request $request, $questionId) {
+        $categoryId = $request->query('category');
+
+        if ($categoryId == null) {
+            return response()->json(['message' => 'Category not specified.'], 422);
+        }
+
+        $question = new Question();
+        $question = $question->findQuestion($questionId, $categoryId);
 
         if ($question == null) {
             return response()->json(['message' => 'Question not found.'], 404);
         }
 
         $question->delete();
-
-        return response()->json(['message' => 'Question deleted.'], 200);
+        
+        return response()->json(['message' => 'Question deleted.'], 204);
     }
 }
