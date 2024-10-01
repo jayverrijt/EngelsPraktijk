@@ -73,7 +73,7 @@
                         <p class="cardAddHeaderP">Open vragen toevoegen</p>
                     </div>
                     <div class="cardAddBody">
-                        <form method="get" action="">
+                        <form method="get" action="{{route('admin.cards-add')}}">
                             <div style="height: 5vh">
                                 <label style="left: 5%; position:relative;" for="qname">Naam van vraag</label>
                                 <input type="text" id="qname" name="qname"/>
@@ -90,7 +90,7 @@
                                 @endforeach
                             </select>
                             </div>
-                            <button class="cardBtnSubmit" type="submit"> Toevoegen</button>
+                            <button class="cardBtnSubmit" name="type" value="1" type="submit"> Toevoegen</button>
                         </form>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     <div class="cardAddHeader">
                         <p class="cardAddHeaderP">Ja/Nee vragen toevoegen</p>
                     </div>
-                    <form method="get" action="">
+                    <form method="get" action="{{route('admin.cards-add')}}">
                         <div class="cardAddBody">
                             <div style="height: 5vh">
                                 <label style="left: 5%; position:relative;" for="qname">Naam van vraag</label>
@@ -120,7 +120,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <button class="cardBtnSubmit" type="submit"> Toevoegen</button>
+                            <button class="cardBtnSubmit" name="type" value="2" type="submit"> Toevoegen</button>
                         </div>
                     </form>
                 </div>

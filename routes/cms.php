@@ -8,6 +8,7 @@
     use App\Http\Controllers\InYourColourController;
     use App\Http\Controllers\ImageController;
     use App\Http\Controllers\AdminDBController;
+    use App\Http\Controllers\CardController;
 
     Route::middleware('auth')->group(function () {
         Route::get('/admin/dashboard', function () {
@@ -21,27 +22,17 @@
             $levels = \DB::table('levels')->select('id', 'level_name')->get();
             return view('admin.layouts.cards', compact('qs', 'qsyn', 'ov', 'jnv', 'levels'));
         })->middleware(['auth', 'verified'])->name('admin.cards');
+        Route::get('/admin/cards/fs', function () {
+
+        })->middleware(['auth', 'verified'])->name('admin.cards-fs');
+        Route::get('/admin/cards/add', [CardController::class, 'add'])->name('admin.cards-add');
         Route::get('/admin/dashboard/db', function () {
             return view('admin.layouts.db');
         })->middleware(['auth', 'verified'])->name('admin.dashboard-db');
         Route::get('/admin/dashboard/users', function () {
-            $users = DB::table('users')->select('id','name', 'email', 'class', 'type')->get();
+            $users = DB::table('users')->select('id','name', 'email', 'class_id', 'type')->get();
             return view('admin.layouts.users', compact('users'));
         })->middleware(['auth', 'verified'])->name('admin.dashboard-users');
-        Route::get('/admin/dashboard/inyourecolour', function () {
-            $colors = \DB::table('inyourcolour')->select()->get();
-            return view('admin.layouts.inyourecolour', compact('colors'));
-        })->middleware(['auth', 'verified'])->name('admin.dashboard-inyourecolour');
-        Route::get('/admin/dashboard/inyourecolour/add/', [InYourColourController::class, 'add'])->name('admin.dashboard-inyourecolour-add');
-        Route::get('/admin/dashboard/inyourecolour/edit/{id}/', function () {
-            $colors = \DB::table('inyourcolour')->select()->get();
-            return view('admin.layouts.inyourecolour-edit', compact('colors'));
-        })->middleware(['auth', 'verified'])->name('admin.dashboard-inyourecolour-edit');
-        Route::get('/admin/dashboard/inyourecolour/delete/{id}/', function ($id) {
-            DB::table('inyourcolour')->where('id', $id)->delete();
-            return redirect()->route('admin.dashboard-inyourecolour');
-        })->name('admin.dashboard-inyourecolour-delete');
-
         Route::get('/admin/dashboard/admins', function () {
             $users = DB::table('users')->select('id','name', 'email', 'type')->get();
             return view('admin.layouts.admins', compact('users'));
