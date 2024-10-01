@@ -17,6 +17,15 @@ return new class extends Migration
             $table->string('level_name');
             $table->timestamps();
         });
+
+        \DB::table('levels')->insert([
+            ['level_name' => 'A1'],
+            ['level_name' => 'A2'],
+            ['level_name' => 'B1'],
+            ['level_name' => 'B2'],
+            ['level_name' => 'C1'],
+            ['level_name' => 'C2'],
+        ]);
     }
 
     /**

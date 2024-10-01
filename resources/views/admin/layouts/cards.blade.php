@@ -11,8 +11,8 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Questions', 'Type of Questions'],
-                ['Open vragen',     20],
-                ['Ja/Nee vragen',      22],
+                ['Open vragen',     {{$ov}}],
+                ['Ja/Nee vragen',      {{$jnv}}],
             ]);
 
             var options = {
@@ -67,8 +67,63 @@
 
             </div>
             <!--- Card Right Top - Controls --->
-            <div class="bodyControl" style="right: 0; top: 0">
-
+            <div class="bodyControl" style="right: 0; top: 0; background-color: transparent">
+                <div class="bodyControl" style="width: 48%;height: 100%; left: 0; top: 0;">
+                    <div class="cardAddHeader">
+                        <p class="cardAddHeaderP">Open vragen toevoegen</p>
+                    </div>
+                    <div class="cardAddBody">
+                        <form method="get" action="">
+                            <div style="height: 5vh">
+                                <label style="left: 5%; position:relative;" for="qname">Naam van vraag</label>
+                                <input type="text" id="qname" name="qname"/>
+                            </div>
+                            <div style="height: 5vh">
+                                <label style="left: 5%; position:relative;" for="qanswer">Antwoord</label>
+                                <input type="text" id="qanswer" name="qanswer"/>
+                            </div>
+                            <div style="height: 5vh">
+                            <label style="left: 5%; position:relative;" for="qlevel">Level</label>
+                            <select name="qlevel" id="qlevel">
+                                @foreach($levels as $lvl)
+                                    <option value="{{$lvl->id}}">{{$lvl->level_name}}</option>
+                                @endforeach
+                            </select>
+                            </div>
+                            <button class="cardBtnSubmit" type="submit"> Toevoegen</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="bodyControl" style="width: 48%;height: 100%; right: 0; top: 0;">
+                    <div class="cardAddHeader">
+                        <p class="cardAddHeaderP">Ja/Nee vragen toevoegen</p>
+                    </div>
+                    <form method="get" action="">
+                        <div class="cardAddBody">
+                            <div style="height: 5vh">
+                                <label style="left: 5%; position:relative;" for="qname">Naam van vraag</label>
+                                <input type="text" id="qname" name="qname"/>
+                            </div>
+                            <div style="height: 5vh">
+                                <label style="left: 5%; position:relative;" for="qansweryn">Antwoord</label>
+                                <select name="qansweryn" id="qansweryn">
+                                    <option value="0">Ja/nee kiezen</option>
+                                    <option value="1">Ja</option>
+                                    <option value="2">Nee</option>
+                                </select>
+                            </div>
+                            <div style="height: 5vh">
+                                <label style="position:relative; left: 5%" for="qlevel">Level</label>
+                                <select name="qlevel" id="qlevel">
+                                    @foreach($levels as $lvl)
+                                        <option value="{{$lvl->id}}">{{$lvl->level_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <button class="cardBtnSubmit" type="submit"> Toevoegen</button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <!--- Card Right Bottom - List Qs --->
             <div class="bodyControl" style="right: 0; bottom: 0">

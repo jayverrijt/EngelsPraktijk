@@ -15,8 +15,11 @@
         })->middleware(['auth', 'verified'])->name('admin.dashboard');
         Route::get('/admin/cards', function () {
             $qs = \DB::table('questions')->select()->get();
+            $ov = \DB::table('questions')->select()->max('id');
+            $jnv = \DB::table('questionsyn')->select()->max('id');
             $qsyn = \DB::table('questionsyn')->select()->get();
-            return view('admin.layouts.cards', compact('qs', 'qsyn'));
+            $levels = \DB::table('levels')->select('id', 'level_name')->get();
+            return view('admin.layouts.cards', compact('qs', 'qsyn', 'ov', 'jnv', 'levels'));
         })->middleware(['auth', 'verified'])->name('admin.cards');
         Route::get('/admin/dashboard/db', function () {
             return view('admin.layouts.db');
