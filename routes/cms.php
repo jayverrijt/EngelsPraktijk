@@ -23,6 +23,7 @@
             return view('admin.layouts.cards', compact('qs', 'qsyn', 'ov', 'jnv', 'levels'));
         })->middleware(['auth', 'verified'])->name('admin.cards');
         Route::get('/admin/cards/fs', function () {
+            $type = request('type');
 
         })->middleware(['auth', 'verified'])->name('admin.cards-fs');
         Route::get('/admin/cards/add', [CardController::class, 'add'])->name('admin.cards-add');

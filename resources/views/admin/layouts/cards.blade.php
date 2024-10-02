@@ -46,10 +46,13 @@
             <!--- Card Left Bottom - List Yes No Qs --->
             <div class="bodyControl" style="bottom: 0; left: 0">
                 <div class="maxbtn">
-                    <i id="maxbtnico" class="fas fa-compress"></i>
+                    <form method="get" action="{{route('admin.cards-fs')}}">
+                        <button name="type" value="1" style="border: solid 0; background-color: transparent" type="submit"><i id="maxbtnico" class="fas fa-compress"></i></button>
+                    </form>
                 </div>
                 <table id="customers">
-                    <tr class=""> <th>Vraag</th>
+                    <tr class="">
+                        <th>Vraag</th>
                         <th>Antwoord</th>
                         <th>Categorie</th>
                         <th>Level</th>
@@ -128,7 +131,9 @@
             <!--- Card Right Bottom - List Qs --->
             <div class="bodyControl" style="right: 0; bottom: 0">
                 <div class="maxbtn">
-                    <i id="maxbtnico" class="fas fa-compress"></i>
+                    <form method="get" action="{{route('admin.cards-fs')}}">
+                        <button style="border: solid 0; background-color: transparent" name="type" value="2" type="submit"><i id="maxbtnico" class="fas fa-compress"></i></button>
+                    </form>
                 </div>
                 <table id="customers">
                     <tr class="">
