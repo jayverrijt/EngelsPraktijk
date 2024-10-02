@@ -38,3 +38,5 @@ Route::resource('classes', ClassController::class, [
 Route::resource('questions', QuestionController::class, [
     'except' => ['create', 'edit']
 ]);
+Route::get('/print/questions', [QuestionController::class, 'printPdf'])->name('printPDF');
+Route::get('/a', [QuestionController::class, 'temp']);
