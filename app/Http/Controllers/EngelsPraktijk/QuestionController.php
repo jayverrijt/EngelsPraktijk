@@ -34,31 +34,6 @@ class QuestionController extends Controller
         return $questions;
     }
 
-    public function temp() {
-        for ($i = 0; $i < 100; $i++) {
-            $request = [];
-            $request['question'] = fake()->sentence();
-
-            $random = rand(0, 100);
-            if ($random > 50) {
-                $request['answer'] = fake()->sentence();
-            }
-            else {
-                $random = rand(0, 100);
-                if ($random > 50) {
-                    $request['answer'] = 'y';
-                }
-                else {
-                    $request['answer'] = 'n';
-                }
-            }
-            $request['level_id'] = 1;
-
-            $question = new Question();
-            $question->addQuestion($request);
-        }
-    }
-
     public function store(QuestionModificationRequest $request) {
         $validatedRequest = $request->validated();
 
@@ -120,7 +95,7 @@ class QuestionController extends Controller
         return response()->json(['message' => 'Question deleted.'], 204);
     }
 
-    public function printPdf(Request $request) {
+    public function getRandom(Request $request) {
         $categories = $request->input('categories', []);
         $limit = $request->query('limit');
         $questions = [];
@@ -135,13 +110,16 @@ class QuestionController extends Controller
             }
         }
         else {
+            if ($limit == null) {
+                return response()->json(['message' => 'Either specify categories or a limit.', 422]);
+            }
+
             $retrievedQuestions = $this->questionService->getRandomQuestions($limit);
 
             foreach ($retrievedQuestions as $retrievedQuestion) {
                 array_push($questions, $retrievedQuestion);
             }
         }
-
-        return $questions;        
+    return $questions;        
     }
 }

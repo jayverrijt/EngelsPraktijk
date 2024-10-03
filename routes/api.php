@@ -35,8 +35,7 @@ Route::resource('classes', ClassController::class, [
 ]);
 
 //Questions
+Route::get('/questions/random', [QuestionController::class, 'getRandom'])->name('getRandom');
 Route::resource('questions', QuestionController::class, [
     'except' => ['create', 'edit']
 ]);
-Route::get('/print/questions', [QuestionController::class, 'printPdf'])->name('printPDF');
-Route::get('/a', [QuestionController::class, 'temp']);
