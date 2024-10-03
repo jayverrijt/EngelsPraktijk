@@ -1,8 +1,12 @@
 @extends("admin/dashboard")
 @section('content')
     <link rel="stylesheet" href="{{asset('css/cms/cards.css')}}">
+    <link rel="stylesheet" href="{{asset('css/cms/popups.css')}}">
     <link rel="stylesheet" href="{{ asset('css/cms/users.css') }}">
     <link rel="stylesheet" href="{{asset('css/cms/launch.css')}}">
+    <div class="container popup-container" style="display: none" id="popupContainer">
+        @yield('popupcontent')
+    </div>
     <div class="container contentcardsfs">
         <div class="container cardsfshead">
             <p style="font-size: 1rem; position:relative; left: 2%; color: #2e3440; font-weight: 600; width: 50%">
@@ -27,12 +31,12 @@
                         <td>{{$q->level_id}}</td>
                         <td style="display: inline-flex; width: 100%; position:relative;">
                             <div id="btnEdit" style="height: 100%; width: 15%">
-                                <form method="get" action="">
+                                <form method="get" action="{{route('admin.cards-upd', ['t' => $type])}}">
                                     <button type="submit" name="item" value="{{$q->id}}"><i class="fas fa-pencil-alt"></i></button>
                                 </form>
                             </div>
                             <div id="btnDelete">
-                                <form method="get" action="">
+                                <form method="get" action="{{route('admin.cards-del', ['t' => $type])}}">
                                     <button type="submit" name="item" value="{{$q->id}}"><i class="fas fa-trash"></i></button>
                                 </form>
                             </div>
@@ -40,9 +44,6 @@
                     </tr>
                 @endforeach
             </table>
-
         </div>
     </div>
-
-
 @endsection
