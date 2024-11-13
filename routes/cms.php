@@ -27,6 +27,15 @@
             }
             return view('admin.layouts.cards-fs', compact('type', 'data'));
         })->middleware(['auth', 'verified'])->name('admin.cards-fs');
+        Route::get('/noti/cards/del/{t}/', function ($t) {
+            $type = $t;
+            if ($type == 1) {
+                $data = \DB::table('questions')->select()->get();
+            } elseif ($type == 2) {
+                $data = \DB::table('questionsyn')->select()->get();
+            }
+            return view('admin.layouts.cards-popup-del', compact('type', 'data'));
+        })->middleware(['auth', 'verified'])->name('noti.cards-del');
         Route::get('/admin/cards/add', [CardController::class, 'add'])->name('admin.cards-add');
         Route::get('/admin/dashboard/db', function () {
             return view('admin.layouts.db');

@@ -1,0 +1,74 @@
+.locationBar {
+    height: 6%;
+    width: 98%;
+    background-color: #ececf6;
+    border: solid 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 1%;
+    transform: translateX(1%);
+}
+
+.locationBody {
+    height: 90%;
+    width: 98%;
+    background-color: white;
+    border: solid 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 7%;
+    transform: translateX(1%);
+}
+.canvaGenderContainer {
+    height: 500px;
+    width: 30%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0px;
+}
+.canvaGenderContainer text {
+    fill: #bd0926;
+}
+.canvaRegioContainer {
+    height: 500px;
+    width: 60%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+    right: 0;
+}
+.canvaGenderContainer {
+    top: 2%;
+    position: relative;
+    left: 2%;
+    height: 90%;
+    width: 30%;
+    display: inline-block;
+}
+.canvaRegioContainer {
+    top: 2%;
+    position: absolute;
+    display: inline-block;
+    right: 2%;
+    height: 90%;
+    width: 60%;
+}
+.canvaGenderHead {
+    height: 10%;
+    width: 100%;
+    top: 0%;
+    background-color: #ececf6;
+    border-radius: 25px;
+}
+.canvaGenderBody {
+    height: 90%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    border: solid 1px #ececf6; !important;
+}
+#genderIcon {
+    position: relative;
+    left: 40%;
+    top: 25%;
+}

@@ -1,0 +1,1 @@
+<?php /**PATH /Users/jayv/Projects/EngelsPraktijk/resources/views/welcome.blade.php ENDPATH**/ ?>

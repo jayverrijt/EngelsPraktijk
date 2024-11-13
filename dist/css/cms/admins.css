@@ -1,0 +1,224 @@
+.locationBar {
+    height: 6%;
+    width: 98%;
+    background-color: #ececf6;
+    border: solid 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 1%;
+    transform: translateX(1%);
+}
+
+.addAdminBtn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10%;
+    background-color: transparent;
+    border: solid 0;
+    border-radius: 0px 5px 5px 0px;
+}
+.addAdminBtn a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #6c757d;
+    text-decoration: none;
+    position: absolute;
+}
+.elevateAdminBtn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 9%;
+    height: 100%;
+    width: 10%;
+    background-color: transparent;
+    border: solid 0;
+    border-radius: 0px 5px 5px 0px;
+}
+.elevateAdminBtn a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color:#6c757d ;
+    text-decoration: none;
+    position: absolute;
+}
+.adminContainer {
+    height: 90%;
+    width: 98%;
+    background-color: transparent;
+    border: solid 0;
+    border-radius: 5px;
+    position: absolute;
+    display: inline-block;
+    bottom: 1%;
+    transform: translateX(1%);
+}
+.adminCard {
+    height: 300px;
+    width: 400px;
+    border: solid 1px rgba(0,0,0,.125);
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+.cardHeader {
+    height: 15%;
+    width: 100%;
+    background-color: rgba(0,0,0,.03);
+    border: solid 0;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.cardBody {
+    height: 85%;
+    width: 100%;
+    background-color: transparent;
+    border: solid 0;
+    position: absolute;
+    top: 15%;
+    border-radius: 0px 0px 5px 5px;
+}
+.cardIcon {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+}
+.cardContext {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.cardContextName {
+    height: 20%;
+    width: 100%;
+    border: solid 0;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+.cardContextMail {
+    height: 20%;
+    width: 100%;
+    border: solid 0;
+    top: 20%;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+.cardContext a {
+    text-decoration: none;
+    color: #6c757d;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+.changeButtoncard {
+    display: inline-block;
+    right: 12%;
+    position: absolute;
+    color:#007bff ;
+    cursor: pointer;
+}
+.cardContextChange {
+    height: 20%;
+    width: 100%;
+    border: solid 0;
+    top: 40%;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+.cardContextChangePass {
+    height: 20%;
+    width: 100%;
+    border: solid 0;
+    top: 60%;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+.cardContextDelete {
+    height: 20%;
+    width: 100%;
+    border: solid 0;
+    top: 80%;
+    background-color: transparent;
+    position: absolute;
+    display: inline-block;
+}
+.adminContainerNormal {
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    border: solid 0;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+.adminContainerSocial {
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    border: solid 0;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+/* DROPDOWN ELEVATE ADMIN*/
+.dropmenu {
+    height: 40%;
+    width: 10%;
+    background-color: white;
+    right: 10%;
+    position: absolute;
+    border: solid 1px rgba(0,0,0,.125);
+    border-radius: 5px;
+    top: 8%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.unElevateAdminBtn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 18%;
+    height: 100%;
+    width: 10%;
+    background-color: transparent;
+    border: solid 0;
+    border-radius: 0px 5px 5px 0px;
+}
+.unElevateAdminBtn a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color:#6c757d ;
+    text-decoration: none;
+    position: absolute;
+}
+.undropmenu {
+    height: 40%;
+    width: 10%;
+    background-color: white;
+    right: 18%;
+    position: absolute;
+    border: solid 1px rgba(0,0,0,.125);
+    border-radius: 5px;
+    top: 8%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

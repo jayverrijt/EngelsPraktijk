@@ -1,0 +1,159 @@
+.bodyControl {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    position: absolute;
+    min-width: 49%;
+    margin: 0;
+    padding: 0;
+    min-height: 49%;
+    border: solid 0;
+    display: inline-block;
+}
+
+.maxbtn {
+    min-height: 15%;
+    min-width: 8%;
+    border-radius: 15px;
+    border: solid 0;
+    position: absolute;
+    z-index: 1;
+    right: 1%;
+    top: 1%;
+    background-color: #ececf6;
+}
+#maxbtnico {
+    font-size: 2rem;
+    left: 30%;
+    cursor: pointer;
+    color: #2e3440;
+    top: 20%;
+    position: absolute;
+}
+#maxbtnico:hover {
+    color: orange;
+}
+.cardAddHeader {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+    top: 0;
+}
+.cardAddHeaderP {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    color: #2e3440;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.cardAddBody {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    border: solid 0;
+    bottom: 0;
+}
+#qname, #qanswer {
+    height: 50%;
+    float: right;
+    right: 5%;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #2e3440;
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    color: #2e3440;
+}
+#qlevel, #qansweryn {
+    height: 50%;
+    float: right;
+    right: 5%;
+    position: relative;
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    border-bottom: .2em solid #2e3440;
+    border-radius: .2em .2em 0 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #2e3440;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+}
+.cardBtnSubmit {
+    position: relative;
+    left: 5%;
+    appearance: none;
+    border: .2em solid #2e3440;
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: #2e3440;
+    border-radius: 2em;
+    transition: 1s;
+    &:hover, &:focus, &:active {
+        background: #2e3440;
+        color: white;
+    }
+}
+
+.contentcardsfs {
+    background-color: transparent;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    min-width: 98%;
+    padding: 0;
+    min-height: 98%;
+    border: solid 0;
+    display: inline-block;
+}
+
+.cardsfshead {
+    background-color: #ececf6;
+    border-radius: 10px;
+    position: absolute;
+    min-width: 100%;
+    min-height: 5%;
+    border: solid 0;
+    display: inline-block;
+}
+.cardsfsbody {
+    background-color: #ececf6;
+    border-radius: 10px;
+    position: absolute;
+    min-width: 100%;
+    min-height: 90%;
+    bottom: 2%;
+    border: solid 0;
+    display: inline-block;
+}
+#btnEdit button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid 0;
+    background-color: blue;
+    font-size: 1.2rem;
+    color: white;
+}
+#btnDelete button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+    border: solid 0;
+    background-color: red;
+    font-size: 1.2rem;
+    color: white;
+}
